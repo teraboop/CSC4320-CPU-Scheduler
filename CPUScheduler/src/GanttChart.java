@@ -10,8 +10,8 @@ public class GanttChart {
     }
 
     private void makeGanttChartSegment(int pid, int startTime) {
-        ganttTop += "|  P" + pid + "  ";
-        ganttBottom += startTime + "    ";       
+        ganttTop += "| P" + pid + " ";
+        ganttBottom += String.format("%-5d", startTime);       
     }
 
     public void printGanttChart() {

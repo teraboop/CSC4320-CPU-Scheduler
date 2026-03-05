@@ -18,8 +18,8 @@ public class FCFSScheduling extends SchedulingAlgorithm {
     @Override
     public ProcessExecutionResult executeProcesses() {
         processes.sort((p1, p2) -> {
-            int priorityComparison = Integer.compare(p1.getArrivalTime(), p2.getArrivalTime());
-            return priorityComparison;
+            int arrivalComparison = Integer.compare(p1.getArrivalTime(), p2.getArrivalTime());
+            return arrivalComparison;
         });
         ProcessExecutionResult result = new ProcessExecutionResult();
         totalTime = 0;
