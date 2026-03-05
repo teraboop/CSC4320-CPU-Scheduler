@@ -1,9 +1,12 @@
 public class PCB {
-    private int PID;
-    private int arrivalTime;
-    private int burstTime;
+    final private int PID;
+    final private int arrivalTime;
+    final private int burstTime;
+    final private int priority;
     private int remainingTime;
-    private int priority;
+    private int waitingTime;
+    private int turnaroundTime;
+
 
     public PCB(int PID, int ArrivalTime, int BurstTime, int priority) {
         this.PID = PID;
@@ -36,5 +39,21 @@ public class PCB {
     public int getPriority() {
         return priority;
     }
-    
+
+    public int getWaitingTime() {
+        return waitingTime;
+    }
+
+    public void setWaitingTime(int waitingTime) {
+        this.waitingTime = waitingTime;
+    }
+
+    public int getTurnaroundTime() {
+        return turnaroundTime;
+    }
+
+    public void setTurnaroundTime(int turnaroundTime) {
+        this.turnaroundTime = turnaroundTime;
+    }
+
 }
